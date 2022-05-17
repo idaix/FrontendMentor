@@ -1,0 +1,193 @@
+body{
+    transition: .5s;
+    &.body-to-dark{
+        background-color: rgba($color: #000000, $alpha: .7);
+    }
+}
+// header 
+header{
+    padding: 1rem 0;
+    .container{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        @media (max-width: 375px) {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+    .get-nav{
+        cursor: pointer;
+        z-index: 2;
+        &.active{
+            opacity: 0;
+        }
+        @media (min-width: 375px) {
+            display: none;
+        }
+        
+    }
+    .navbar{
+        color: $Gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 3rem;
+        .right{
+            .btn{
+                color: $Gray;
+                &:hover{
+                    color: $Black;
+                }
+            }
+        }
+        .left{
+            ul{
+                display: flex;
+                &>li{
+                    position: relative;
+                    margin-right: 2rem;
+                    transition: $duration-3;
+                    cursor: pointer;
+                    &:hover{
+                        color: $Black;
+                        &>.dropdown-container{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media (max-width: 375px) {
+            display: none;
+        }
+    }
+}
+// navbar mobile
+#navMobile{
+    overflow: hidden;
+    // display: none;
+    z-index: 1;
+    position: absolute;
+    width: 70%;
+    min-height: 100%;
+    padding-top: 5rem;
+    background-color: $White;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    top: 0;
+    right: -85%;
+    transition: .5s;
+    .right{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        .btn{
+            color: $Gray;
+            &:hover{
+                color: $Black;
+            }
+        }
+    }
+    .left{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        color: $Gray;
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            li{
+                margin-bottom: 1rem;
+                transition: $duration-3;
+                cursor: pointer;
+                &:hover{
+                    color: $Black;
+                }
+            }
+        }
+    }
+    &.active{
+        right: 0;
+    }
+    .close-btn{
+        position: absolute;
+        top: 1rem;
+        right: .5rem;
+        width: 2rem;
+        height: 2rem;
+        
+    }
+}
+
+
+
+// main
+main{
+    padding-top: 3rem;
+    .main{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        @media (min-width: 375px) {
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 10rem;
+            width: 90%;
+        }
+    }
+    .info{
+        margin-bottom: 5rem;
+        @media (max-width: 375px){
+            margin-top: 5rem;
+            text-align: center;
+        }
+        position: relative;
+        .title{
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            @media (min-width: 375px){
+                font-size: 50px;                
+            }
+        }
+        p{
+            color: $Gray;
+            margin-bottom: 1.5rem;
+        }
+        .brands{
+            display: flex;
+        }
+    }
+    .hero{
+        .desctop{
+            @media (max-width: 375px){
+                display: none;
+            }
+        }
+        .mobile{
+            display: none;
+            @media (max-width: 375px){
+                display: block;
+            }
+        }
+
+    }
+    .brands{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        bottom: 0;
+        img{
+            width: 65px;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <!-- link css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- mobile -->
+  <nav id="navMobile" >
+    <div class="close-btn">
+      <img src="./assets/images/icon-close-menu.svg" alt="close menu">
+    </div>
+    <div class="left">
+      <ul>
+        <li>Features
+          <div class="dropdown-container">
+            <ul class="dropdown mobile">
+              <li><div class="icon"><img src="./assets/images/icon-todo.svg" alt=""></div>Todo List</li>
+              <li><div class="icon"><img src="./assets/images/icon-calendar.svg" alt=""></div>Calendar</li>
+              <li><div class="icon"><img src="./assets/images/icon-reminders.svg" alt=""></div>Reminders</li>
+              <li><div class="icon"><img src="./assets/images/icon-planning.svg" alt=""></div>Planning List</li>
+            </ul>
+          </div>
+        </li>
+        <li>Company
+          <div class="dropdown-container">
+            <ul class="dropdown mobile">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+        </li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn">Login</button>
+      <button class="btn btn-outline-main">Register</button>
+    </div>
+  </nav>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <div class="logo"><img src="./assets/images/logo.svg" alt="snap logo"></div>
+      <nav class="navbar">
+        <div class="left">
+          <ul>
+            <li>Features
+              <div class="dropdown-container">
+                <ul class="dropdown desctop">
+                  <li><div class="icon"><img src="./assets/images/icon-todo.svg" alt=""></div>Todo List</li>
+                  <li><div class="icon"><img src="./assets/images/icon-calendar.svg" alt=""></div>Calendar</li>
+                  <li><div class="icon"><img src="./assets/images/icon-reminders.svg" alt=""></div>Reminders</li>
+                  <li><div class="icon"><img src="./assets/images/icon-planning.svg" alt=""></div>Planning List</li>
+                </ul>
+              </div>
+            </li>
+            <li>Company
+              <div class="dropdown-container">
+                <ul class="dropdown desctop">
+                  <li>History</li>
+                  <li>Our Team</li>
+                  <li>Blog</li>
+                </ul>
+              </div>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div class="right">
+          <button class="btn">Login</button>
+          <button class="btn btn-outline-main">Register</button>
+        </div>
+      </nav>
+      <div class="get-nav">
+        <img src="./assets/images/icon-menu.svg" alt="menu">
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- main -->
+<main>
+  <div class="container">
+    <div class="main">
+        <div class="info">
+          <h1 class="title">Make remote work</h1>
+          <p>Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.</p>
+            <button class="btn btn-main">Learn more</button>
+        </div>
+        <div class="hero">
+          <img src="./assets/images/image-hero-desktop.png" alt="hero" class="desctop" >
+          <img src="./assets/images/image-hero-mobile.png" alt="hero" class="mobile">
+        </div>
+        <div class="brands">
+          <img src="./assets/images/client-databiz.svg">
+          <img src="./assets/images/client-audiophile.svg">
+          <img src="./assets/images/client-meet.svg">
+          <img src="./assets/images/client-maker.svg">
+        </div>
+      </div>
+    </div>
+</main>
+  <!-- end main -->
+<!--
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

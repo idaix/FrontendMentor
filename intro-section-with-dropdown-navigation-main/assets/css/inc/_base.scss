@@ -1,0 +1,117 @@
+// basics
+// root
+$White: hsl(0, 0%, 98%);
+$Gray: hsl(0, 0%, 41%);
+$Black: hsl(0, 0%, 8%);
+$rad-15: 10px;
+$duration-3: .3s;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(248, 246, 246);
+    color: $Black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+}
+p{
+    font-size: 18px;
+}
+
+// container
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    // small
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    // medium
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    // large
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+
+// list
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+//dropdown
+.dropdown-container{
+    display: none;
+    margin-top: -.5rem;
+    .dropdown{
+        &.mobile{
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+        }
+        &.desctop{
+            z-index: 2;
+            padding: 1rem;
+            margin-top: .5rem;
+            position: absolute;
+            left: 0;
+            background-color: white;
+            border-radius: $rad-15;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .icon{
+            width: 30px;
+        }
+    }
+
+}
+
+// buttons
+.btn{
+    background-color: transparent;
+    font-weight: 700;
+    padding: .7rem;
+    min-width: 6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: $rad-15;
+    transition: $duration-3;
+    &.btn-main{
+        background-color: $Black;
+        color: $White;
+        &:hover{
+            background-color: transparent;
+            border-color:$Black;
+            color: $Black;
+        }
+    }
+    &.btn-outline-main{
+        color: $Gray;
+        border: 1px solid $Gray;
+        &:hover{
+            border-color: $Black;
+        }
+    }
+}
+
+
+// image
+img{
+    max-width: 100%;
+}
