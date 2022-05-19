@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+/* Root */
+:root{
+    /* Color */
+    --text-color: hsl(193, 38%, 86%);
+    --main-color: hsl(150, 100%, 66%);
+    --blue-1: hsl(217, 19%, 38%);
+    --blue-2: hsl(217, 19%, 24%);
+    --blue-3: hsl(218, 23%, 16%);
+    /* Font */
+    --body-font: 'Manrope', sans-serif;
+    /* Font Sise */
+    --quote-size: 28px;
+}
+
+/* Basics */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--blue-3);
+    font-family: var(--body-font);
+    font-weight: 800;
+    color: var(--text-color);
+
+    height: 100vh;
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+}
+
+/* Container */
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (max-width: 375px) {
+    .container{
+        width: 100%;
+    }
+}
+@media (min-width: 375px) {
+    .container{
+        width: 80%;
+    }
+}
+@media (min-width: 1440px) {
+    .container{
+        width: 1410px;
+    }
+}
+
+
+/* App  */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.card{
+    background-color: var(--blue-2);
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (min-width: 375px) {
+    .card{
+        /* width: calc(100% - 50%); */
+        width: 500px;
+    }
+}
+
+.card .card__title{
+    color: var(--main-color);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.card .card__quote{
+    font-size: var(--quote-size);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media (max-width: 375px){
+    .card .card__quote{
+        font-size: 15px;
+
+    }
+    body{
+        font-size: 8px;
+    }
+
+}
+.card .card__quote::before{
+    content: '“';
+}
+.card .card__quote::after{
+    content: '”';
+}
+.card .card__space{
+    margin-bottom: 2rem;
+}
+
+.card .card__space .desktop{display: none;}
+@media (min-width: 375px){
+    .card .card__space .mobile{
+        display: none;
+    }
+    .card .card__space .desktop{display: block;}
+}
+    
+.card .card__button{
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.card .card__button:hover{
+    box-shadow: 0px 0px 30px 1px var(--main-color);
+}
+
+
+
+
+
+
+
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
